@@ -35,6 +35,11 @@ namespace webApiProva2.Controllers
 
             return Ok(servico);
         }
+        [Route("api/Servico/search/{nome}")]
+        public IQueryable<Servico> SearchServico(int idClient)
+        {
+            return db.Servico.Where(e => e.idCliente == idClient);
+        }
 
         // PUT: api/Servicoes/5
         [ResponseType(typeof(void))]
@@ -85,11 +90,7 @@ namespace webApiProva2.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = servico.idServico }, servico);
         }
-        [Route("api/Servico/search/{nome}")]
-        public IQueryable<Servico> SearchServico(int idClient)
-        {
-            return db.Servico.Where(e => e.idCliente == idClient);
-        }
+        
 
 
         // DELETE: api/Servicoes/5

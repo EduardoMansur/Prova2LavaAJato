@@ -13,45 +13,44 @@ using webApiProva2.Models;
 
 namespace webApiProva2.Controllers
 {
-    public class CustomersController : ApiController
+    public class GastosController : ApiController
     {
         private Conexao db = new Conexao();
 
-        // GET: api/Customers
-        public IQueryable<Customer> GetCustomer()
+        // GET: api/Gastos
+        public IQueryable<Gasto> GetGasto()
         {
-            return db.Customer;
+            return db.Gasto;
         }
-        
 
-        // GET: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public IHttpActionResult GetCustomer(int id)
+        // GET: api/Gastos/5
+        [ResponseType(typeof(Gasto))]
+        public IHttpActionResult GetGasto(int id)
         {
-            Customer customer = db.Customer.Find(id);
-            if (customer == null)
+            Gasto gasto = db.Gasto.Find(id);
+            if (gasto == null)
             {
                 return NotFound();
             }
 
-            return Ok(customer);
+            return Ok(gasto);
         }
 
-        // PUT: api/Customers/5
+        // PUT: api/Gastos/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCustomer(int id, Customer customer)
+        public IHttpActionResult PutGasto(int id, Gasto gasto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != customer.idCustomer)
+            if (id != gasto.idGasto)
             {
                 return BadRequest();
             }
 
-            db.Entry(customer).State = EntityState.Modified;
+            db.Entry(gasto).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +58,7 @@ namespace webApiProva2.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(id))
+                if (!GastoExists(id))
                 {
                     return NotFound();
                 }
@@ -72,39 +71,35 @@ namespace webApiProva2.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Customers
-        [ResponseType(typeof(Customer))]
-        public IHttpActionResult PostCustomer(Customer customer)
+        // POST: api/Gastos
+        [ResponseType(typeof(Gasto))]
+        public IHttpActionResult PostGasto(Gasto gasto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Customer.Add(customer);
+            db.Gasto.Add(gasto);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = customer.idCustomer }, customer);
+            return CreatedAtRoute("DefaultApi", new { id = gasto.idGasto }, gasto);
         }
-        [Route("api/Customer/search/{nome}")]
-        public IQueryable<Customer> GetCustomer(string nome)
+
+        // DELETE: api/Gastos/5
+        [ResponseType(typeof(Gasto))]
+        public IHttpActionResult DeleteGasto(int id)
         {
-            return db.Customer.Where(e => e.nome.Contains(nome));
-        }
-        // DELETE: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public IHttpActionResult DeleteCustomer(int id)
-        {
-            Customer customer = db.Customer.Find(id);
-            if (customer == null)
+            Gasto gasto = db.Gasto.Find(id);
+            if (gasto == null)
             {
                 return NotFound();
             }
 
-            db.Customer.Remove(customer);
+            db.Gasto.Remove(gasto);
             db.SaveChanges();
 
-            return Ok(customer);
+            return Ok(gasto);
         }
 
         protected override void Dispose(bool disposing)
@@ -116,9 +111,9 @@ namespace webApiProva2.Controllers
             base.Dispose(disposing);
         }
 
-        private bool CustomerExists(int id)
+        private bool GastoExists(int id)
         {
-            return db.Customer.Count(e => e.idCustomer == id) > 0;
+            return db.Gasto.Count(e => e.idGasto == id) > 0;
         }
     }
 }

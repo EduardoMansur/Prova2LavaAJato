@@ -22,6 +22,7 @@ namespace webApiProva2.Controllers
         {
             return db.Material;
         }
+ 
 
         // GET: api/Materials/5
         [ResponseType(typeof(Material))]
@@ -36,7 +37,7 @@ namespace webApiProva2.Controllers
             return Ok(material);
         }
         [Route("api/Material/search/{nome}")]
-        public IQueryable<Material> GetMaterial(string nome)
+        public IQueryable<Material> GetMaterialbyName(string nome)
         {
             return db.Material.Where(e => e.nome.Contains(nome));
         }

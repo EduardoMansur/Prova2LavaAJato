@@ -239,3 +239,10 @@ C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\tr\Microsoft.Build.Utilities.
 C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\zh-Hans\Microsoft.Build.Utilities.Core.resources.dll
 C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\zh-Hant\Microsoft.Build.Utilities.Core.resources.dll
 C:\Users\User\source\repos\Prova2\Prova2\obj\Debug\Prova2.csproj.Prova2.exe.config
+C:\Users\User\source\repos\Prova2\Prova2\obj\Debug\Prova2.Exibir.resources
+C:\Users\User\source\repos\Prova2\Prova2\obj\Debug\Prova2.CadastrarMaterial.resources
+C:\Users\User\source\repos\Prova2\Prova2\obj\Debug\Prova2.Custos.resources
+C:\Users\User\source\repos\Prova2\Prova2\obj\Debug\Prova2.Forms.CadastrarGasto.resources
+C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\pt-br\System.Net.Http.Formatting.resources.dll

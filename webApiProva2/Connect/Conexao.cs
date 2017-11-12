@@ -24,5 +24,7 @@ namespace webApiProva2.Connect
         public System.Data.Entity.DbSet<webApiProva2.Models.Customer> Customer { get; set; }
 
         public System.Data.Entity.DbSet<webApiProva2.Models.Servico> Servico { get; set; }
+
+        public System.Data.Entity.DbSet<webApiProva2.Models.Gasto> Gasto { get; set; }
     }
 }
