@@ -25,10 +25,15 @@ namespace Prova2
 
         private void Custos_Load(object sender, EventArgs e)
         {
+            setLabels();
+        }
+        private void setLabels()
+        {
+            this.totalGanhos = 0;
+            this.totalGastos = 0;
             GetAllServicoes();
             GetAllGastos();
         }
-
         private async void GetAllServicoes()
         {
             var newURI = URI + "/Servicoes";
@@ -55,7 +60,7 @@ namespace Prova2
         {
 
             totalGanhos = totalGanhos + s.preco;
-            LucroLbl.Text = totalGanhos.ToString();
+            LucroLbl.Text = "R$:" + totalGanhos.ToString();
         }
         private async void GetAllGastos()
         {
@@ -83,7 +88,12 @@ namespace Prova2
         {
 
             totalGastos = totalGastos + s.valor;
-            custoLbl.Text = totalGastos.ToString();
+            custoLbl.Text = "R$:" + totalGastos.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            setLabels();
         }
     }
 }

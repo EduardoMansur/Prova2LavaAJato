@@ -23,6 +23,7 @@ namespace Prova2.Forms
         private void send_Click(object sender, EventArgs e)
         {
             sendEmail();
+            this.Hide();
         }
         async void sendEmail()
         {

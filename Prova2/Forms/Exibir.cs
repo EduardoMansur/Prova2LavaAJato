@@ -78,6 +78,25 @@ namespace Prova2
                 }
             }
         }
+        private async void GetAllGastos()
+        {
+            var newURI = URI + "/Gastos";
+            using (var client = new HttpClient())
+            {
+                using (var response = await client.GetAsync(newURI))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var ProdutoJsonString = await response.Content.ReadAsStringAsync();
+                        dgvDados.DataSource = JsonConvert.DeserializeObject<Model.Gasto[]>(ProdutoJsonString).ToList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível obter o produto : " + response.StatusCode);
+                    }
+                }
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -92,6 +111,11 @@ namespace Prova2
         private void button3_Click(object sender, EventArgs e)
         {
             GetAllCustommers();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GetAllGastos();
         }
     }
 }
