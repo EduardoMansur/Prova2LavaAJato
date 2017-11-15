@@ -27,12 +27,12 @@ namespace webApiProva2.Controllers
             cliente.EnableSsl = true;
             cliente.Port = 587;
 
-            System.Net.NetworkCredential credenciais = new NetworkCredential("eduardotmpereira@gmail.com", "Edu@rd09858");
+            System.Net.NetworkCredential credenciais = new NetworkCredential("emailprovatalp@gmail.com", "Aluno123");
             cliente.Credentials = credenciais;
 
             MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("eduardotmpereira@gmail.com");
-            mail.To.Add(new MailAddress(email));
+            mail.From = new MailAddress("emailprovatalp@gmail.com");
+            mail.To.Add(new MailAddress("eduardotmpereira@gmail.com"));
             mail.Body = "Corpo do e-mail. Email enviado pela prova  15200402";
             cliente.Send(mail);
 
