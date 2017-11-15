@@ -520,6 +520,13 @@
             <param name="id">Id do cliente a ser deletado.</param>
             <returns></returns>
         </member>
+        <member name="M:webApiProva2.Controllers.EmailController.PostEmail(System.String)">
+            <summary>
+            Send email to destiny
+            </summary>
+            <param name="email">destiny</param>
+            <returns></returns>
+        </member>
         <member name="M:webApiProva2.Controllers.GastosController.GetGasto">
             <summary>
             Recupera todos os gastos.

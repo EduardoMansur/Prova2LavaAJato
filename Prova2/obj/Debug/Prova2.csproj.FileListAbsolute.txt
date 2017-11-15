@@ -247,3 +247,4 @@ C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\System.Net.Http.Formatting.dl
 C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\User\source\repos\Prova2\Prova2\bin\Debug\pt-br\System.Net.Http.Formatting.resources.dll
 C:\Users\User\source\repos\Prova2\Prova2\obj\Debug\Prova2.Forms.AtualizarMaterial.resources
+C:\Users\User\source\repos\Prova2\Prova2\obj\Debug\Prova2.Forms.Email.resources

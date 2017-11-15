@@ -22,17 +22,17 @@ namespace Prova2.Forms
 
         private void send_Click(object sender, EventArgs e)
         {
-
+            sendEmail();
         }
-        async void AddGasto()
+        async void sendEmail()
         {
-            var newURI = URI + "/Email/send";
+          
             String email = emailBox.Text;
-
+            var newURI = URI + "/Email?email=" + email;
             using (var client = new HttpClient())
             {
-                var serializedProduto = JsonConvert.SerializeObject(email);
-                var content = new StringContent(serializedProduto, Encoding.UTF8, "application/json");
+                //var content = new StringContent(email, Encoding.UTF8, "application/json");
+                var content = new StringContent(email);
                 var result = await client.PostAsync(newURI, content);
             }
 
