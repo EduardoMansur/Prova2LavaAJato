@@ -15,7 +15,7 @@ namespace Prova2
 {
     public partial class Exibir : Form
     {
-        string URI = "http://localhost:52936/api";
+        string URI = System.Configuration.ConfigurationSettings.AppSettings["ApiURI"];
         int codigoProduto = 1;
         public Exibir()
         {

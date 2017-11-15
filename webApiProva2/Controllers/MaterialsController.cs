@@ -18,6 +18,10 @@ namespace webApiProva2.Controllers
         private Conexao db = new Conexao();
 
         // GET: api/Materials
+        /// <summary>
+        /// Recupera todos os materiais.
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<Material> GetMaterial()
         {
             return db.Material;
@@ -25,6 +29,11 @@ namespace webApiProva2.Controllers
  
 
         // GET: api/Materials/5
+        /// <summary>
+        /// Recupera material por Id.
+        /// </summary>
+        /// <param name="id">id a ser recuperado.</param>
+        /// <returns></returns>
         [ResponseType(typeof(Material))]
         public IHttpActionResult GetMaterial(int id)
         {
@@ -36,6 +45,11 @@ namespace webApiProva2.Controllers
 
             return Ok(material);
         }
+        /// <summary>
+        /// Perquisa material pelo nome.
+        /// </summary>
+        /// <param name="nome">Nome a ser pesquisado.</param>
+        /// <returns></returns>
         [Route("api/Material/search/{nome}")]
         public IQueryable<Material> GetMaterialbyName(string nome)
         {
@@ -43,6 +57,12 @@ namespace webApiProva2.Controllers
         }
 
         // PUT: api/Materials/5
+        /// <summary>
+        /// Atualiza material.
+        /// </summary>
+        /// <param name="id">id para atualização.</param>
+        /// <param name="material">Material ja atualizado.</param>
+        /// <returns></returns>
         [ResponseType(typeof(void))]
         public IHttpActionResult PutMaterial(int id, Material material)
         {
@@ -78,6 +98,11 @@ namespace webApiProva2.Controllers
         }
 
         // POST: api/Materials
+        /// <summary>
+        /// Insere novo material.
+        /// </summary>
+        /// <param name="material">Material a ser inserido.</param>
+        /// <returns></returns>
         [ResponseType(typeof(Material))]
         public IHttpActionResult PostMaterial(Material material)
         {
@@ -93,6 +118,11 @@ namespace webApiProva2.Controllers
         }
 
         // DELETE: api/Materials/5
+        /// <summary>
+        /// Deleta material por Id.
+        /// </summary>
+        /// <param name="id">Id a ser deletado.</param>
+        /// <returns></returns>
         [ResponseType(typeof(Material))]
         public IHttpActionResult DeleteMaterial(int id)
         {

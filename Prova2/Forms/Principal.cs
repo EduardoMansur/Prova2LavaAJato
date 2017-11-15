@@ -65,5 +65,21 @@ namespace Prova2
             cadastro.MdiParent = this;
             cadastro.Show();
         }
+
+        private void atualizarMateriaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AtualizarMaterial cadastro = new AtualizarMaterial();
+
+            cadastro.MdiParent = this;
+            cadastro.Show();
+        }
+
+        private void enviarEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Email cadastro = new Email();
+
+            cadastro.MdiParent = this;
+            cadastro.Show();
+        }
     }
 }

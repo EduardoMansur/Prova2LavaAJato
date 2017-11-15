@@ -18,12 +18,21 @@ namespace webApiProva2.Controllers
         private Conexao db = new Conexao();
 
         // GET: api/Servicoes
+        /// <summary>
+        /// Recupera todos os Serviços.
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<Servico> GetServico()
         {
             return db.Servico;
         }
 
         // GET: api/Servicoes/5
+        /// <summary>
+        /// Recupera serviço por Id.
+        /// </summary>
+        /// <param name="id">Id a ser recuperado.</param>
+        /// <returns></returns>
         [ResponseType(typeof(Servico))]
         public IHttpActionResult GetServico(int id)
         {
@@ -35,6 +44,11 @@ namespace webApiProva2.Controllers
 
             return Ok(servico);
         }
+        /// <summary>
+        /// Pesquisa Serviço por Id do cliente.
+        /// </summary>
+        /// <param name="idClient">id a ser pesqusiado.</param>
+        /// <returns></returns>
         [Route("api/Servico/search/{nome}")]
         public IQueryable<Servico> SearchServico(int idClient)
         {
@@ -42,6 +56,12 @@ namespace webApiProva2.Controllers
         }
 
         // PUT: api/Servicoes/5
+        /// <summary>
+        /// Atualiza Serviço por id.
+        /// </summary>
+        /// <param name="id">id a ser atualizado.</param>
+        /// <param name="servico">Serviço atualizado.</param>
+        /// <returns></returns>
         [ResponseType(typeof(void))]
         public IHttpActionResult PutServico(int id, Servico servico)
         {
@@ -77,6 +97,11 @@ namespace webApiProva2.Controllers
         }
 
         // POST: api/Servicoes
+        /// <summary>
+        /// Insere novo Serviço.
+        /// </summary>
+        /// <param name="servico">Serviço a ser inserido.</param>
+        /// <returns></returns>
         [ResponseType(typeof(Servico))]
         public IHttpActionResult PostServico(Servico servico)
         {
@@ -94,6 +119,11 @@ namespace webApiProva2.Controllers
 
 
         // DELETE: api/Servicoes/5
+        /// <summary>
+        /// Deleta serviço por Id.
+        /// </summary>
+        /// <param name="id">Id a ser deletad.o</param>
+        /// <returns></returns>
         [ResponseType(typeof(Servico))]
         public IHttpActionResult DeleteServico(int id)
         {

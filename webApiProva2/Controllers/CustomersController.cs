@@ -18,13 +18,21 @@ namespace webApiProva2.Controllers
         private Conexao db = new Conexao();
 
         // GET: api/Customers
+        /// <summary>
+        /// Recupera todos os clientes.
+        /// </summary>
+        /// <returns>XML com clientes.</returns>
         public IQueryable<Customer> GetCustomer()
         {
             return db.Customer;
         }
-        
+
 
         // GET: api/Customers/5
+        /// <summary>
+        /// Recupera cliente por id.
+        /// </summary>
+        /// <returns>XML com cliente.</returns>
         [ResponseType(typeof(Customer))]
         public IHttpActionResult GetCustomer(int id)
         {
@@ -38,6 +46,10 @@ namespace webApiProva2.Controllers
         }
 
         // PUT: api/Customers/5
+        /// <summary>
+        /// Atualiza cliente por id.
+        /// </summary>
+        /// <returns></returns>
         [ResponseType(typeof(void))]
         public IHttpActionResult PutCustomer(int id, Customer customer)
         {
@@ -71,8 +83,13 @@ namespace webApiProva2.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-
+        
         // POST: api/Customers
+        /// <summary>
+        /// Insere novo Cliente.
+        /// </summary>
+        /// <param name="customer">Cliente a ser adicionado.</param>
+        /// <returns></returns>
         [ResponseType(typeof(Customer))]
         public IHttpActionResult PostCustomer(Customer customer)
         {
@@ -86,12 +103,23 @@ namespace webApiProva2.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = customer.idCustomer }, customer);
         }
+
+        /// <summary>
+        /// Recupera cliente pelo nome.
+        /// </summary>
+        /// <param name="nome">Nome a ser pesquisado.</param>
+        /// <returns>XML com resultados</returns>
         [Route("api/Customer/search/{nome}")]
         public IQueryable<Customer> GetCustomer(string nome)
         {
             return db.Customer.Where(e => e.nome.Contains(nome));
         }
         // DELETE: api/Customers/5
+        /// <summary>
+        /// Deleta cliente pelo id.
+        /// </summary>
+        /// <param name="id">Id do cliente a ser deletado.</param>
+        /// <returns></returns>
         [ResponseType(typeof(Customer))]
         public IHttpActionResult DeleteCustomer(int id)
         {

@@ -87,3 +87,4 @@ C:\Users\User\source\repos\Prova2\webApiProva2\bin\pt-BR\Microsoft.VisualStudio.
 C:\Users\User\source\repos\Prova2\webApiProva2\bin\pt-BR\Microsoft.VisualStudio.GraphModel.resources.dll
 C:\Users\User\source\repos\Prova2\webApiProva2\obj\Debug\webApiProva2.dll
 C:\Users\User\source\repos\Prova2\webApiProva2\obj\Debug\webApiProva2.pdb
+C:\Users\User\source\repos\Prova2\webApiProva2\bin\XmlDocument.xml

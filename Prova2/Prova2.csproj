@@ -262,6 +262,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AtualizarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AtualizarMaterial.Designer.cs">
+      <DependentUpon>AtualizarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,12 @@
     </Compile>
     <Compile Include="Forms\Custos.Designer.cs">
       <DependentUpon>Custos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Exibir.cs">
       <SubType>Form</SubType>
@@ -310,6 +322,9 @@
     <Compile Include="Forms\Serviço.Designer.cs">
       <DependentUpon>Serviço.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AtualizarMaterial.resx">
+      <DependentUpon>AtualizarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastrar.resx">
       <DependentUpon>Cadastrar.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Custos.resx">
       <DependentUpon>Custos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Exibir.resx">
       <DependentUpon>Exibir.cs</DependentUpon>

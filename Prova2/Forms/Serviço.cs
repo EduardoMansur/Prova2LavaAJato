@@ -16,7 +16,7 @@ namespace Prova2
 {
     public partial class Serviço : Form
     {
-        string URI = "http://localhost:52936/api";
+        string URI = System.Configuration.ConfigurationSettings.AppSettings["ApiURI"];
         int codigoProduto = 1;
         int idCliente = 1;
         List<string> names = new List<string>();
